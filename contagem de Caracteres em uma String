@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+
+int main(void)
+{
+    char nome [80];
+    int count;
+    
+    printf("digite o seu nome completo: ");
+    fgets(nome, sizeof(nome), stdin);
+    
+    nome[strcspn(nome, "\n")] = '\0'; //essa linha serve para remover o enter
+    
+    count = strlen(nome);// função para contar
+    
+    printf("o nome %s tem %d caracteres", nome, count);
+
+
+    return 0;
+}
+
+
+
+
+
+
+
